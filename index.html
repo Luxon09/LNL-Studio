@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNL Studio</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="ikonastd.png">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<script>
+function changeSlide(button, direction) {
+    const slider = button.parentElement;
+    const images = slider.querySelectorAll("img");
+
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+        if (img.classList.contains("active")) {
+            currentIndex = index;
+            img.classList.remove("active");
+        }
+    });
+
+    let newIndex = currentIndex + direction;
+
+    if (newIndex < 0) {
+        newIndex = images.length - 1;
+    }
+
+    if (newIndex >= images.length) {
+        newIndex = 0;
+    }
+
+    images[newIndex].classList.add("active");
+}
+</script>
+<body>
+
+
+<div id="top"></div>
+
+<nav>
+     <img src="ikonastd.png" class="slika">
+    <div class="logo">
+        <span>LNL</span> Studio</div>
+    <ul>
+        <li><a href="#top">Početna</a></li>
+        <li><a href="#games">Igrice</a></li>
+        <li><a href="#about">O nama</a></li>
+    </ul>
+</nav>
+
+    <header class="hero">
+        <h1>Dobrodošli u naš svet igrica</h1>
+        <p>
+            Pogledaj gameplay, pročitaj više o našim projektima
+            i igraj igre koje smo napravili.
+        </p>
+    </header>
+
+    <section id="games">
+        <h2 class="section-title">Naše Igrice</h2>
+
+        <div class="game-card">
+            <div class="game-media">
+                <video controls>
+                    <source src="Bubble Blower 2026-05-12 18-28-36.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="game-info">
+                <h3>Bubble Blower</h3>
+                <p>
+                    Bubble Blower je 2D piksel art igra u kojoj morate da pomognete dečaku u najtežem izazovu. 
+                </p>
+
+                <a class="btn"
+                   href="https://luxon09.itch.io/bubble-blower"
+                   target="_blank">
+                    Igraj / Preuzmi
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-media">
+                <video controls>
+                    <source src="Harmonize 2026-05-12 18-23-54.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="game-info">
+                <h3>Harmonize</h3>
+                <p>
+                    Harmonize je 2D igra bazirana na izboru u kojoj je cilj da između porodice zavlada harmonija.
+                </p>
+
+                <a class="btn"
+                   href="https://luxon09.itch.io/harmonize"
+                   target="_blank">
+                    Igraj / Preuzmi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">O Nama</h2>
+
+        <div class="about-box">
+            <p>
+                Mi smo tim 16-godišnjih developera iz ETŠ Mija Stanimirović. Fokusirani smo na kreiranje zabavnih projekata, stalno učenje i pomeranje granica onoga što možemo da napravimo.
+Naš rad su prepoznali i profesionalci - višestruki smo takmičari Univerziteta Metropolitan, gde smo 2025. godine osvojili drugo mesto sa igrom Harmonize. Sve naše igre su pravljene u programskom jeziku C# (Unity) a sve slike, likovi i pozadine ručno u programima kao što su Aseprite i drugi.
+Ovaj sajt je prikaz naših radova i kreacija i mesto gde naše ideje postaju dostupne svima. U budućnosti nas naravno čekaju još mnogo izazova, takmičenja i projekata!!! Takođe link profila na kome su dostupne obe naše igrice je: <a href="https://luxon09.itch.io/"  target="_blank">luxon09.itch.io</a>.
+            </p>
+        </div>
+    </section>
+    <h2 class="section-title more-projects-title">
+    Više o našim projektima
+</h2>
+    <section id="more-games">
+
+
+        <div class="details-content">
+            
+            <div class="details-text">
+                <h3>Bubble Blower</h3>
+                <p>
+                    Bubble Blower je 2D pixel art igra u kojoj pratiš dečaka koji se nalazi u školi i potrebna mu je tvoja pomoć da zaštiti svoj najveći i najlepši balon od različitih prepreka. Tokom igre suočavaš se sa raznim predmetima i insektima koji pokušavaju da probuše balon. Tvoj zadatak je da veštim upravljanjem i brzom reakcijom sačuvaš balon što duže i pomogneš glavnom junaku da uspe u ovom neobičnom izazovu.
+                </p>
+
+            </div>
+
+            
+            <div class="image-slider">
+    <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+
+    <img src="mainscreen.png" class="active" alt="Bubble Blower 1">
+    <img src="ss.png" alt="Bubble Blower 2">
+    <img src="ss1.png" alt="Bubble Blower 3">
+
+    <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+</div>
+        </div>
+    </div>
+
+    
+
+        <div class="details-content">
+           
+            <div class="details-text">
+                <h3>Harmonize</h3>
+                <p>
+                 Harmonize je 2D igra zasnovana na narativu i donošenju odluka, u kojoj je porodici potrebna tvoja pomoć. Priča prati porodicu čiji odnosi nisu najbolji — članovi porodice se često svađaju i ne razumeju jedni druge. Tvoj zadatak je da pažljivo biraš dijaloge i odluke kako bi rešio njihove probleme na najbolji mogući način. Svaka odluka utiče na tok priče, a krajnji cilj igre je da uspostaviš harmoniju i obnoviš dobre odnose među svim članovima porodice.
+                </p>
+
+            </div>
+
+            
+           <div class="image-slider">
+    <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+
+    <img src="harmonize main screen.png" class="active" alt="harmonize ide ovde!!! 1">
+    <img src="sss.png" alt="harmonize ide ovde!!! 2">
+    <img src="ssss.png" alt="harmonize ide ovde!!! 3">
+
+    <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+</div>
+        </div>
+    </div>
+
+</section>
+
+    <footer>
+        © 2026 LNL Studio
+    </footer>
+
+</body>
+</html>
