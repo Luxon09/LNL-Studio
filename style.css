@@ -326,8 +326,7 @@ html {
  {
     height: 75px;
     width: 75px;
-    
-    position: absolute;
+    position: static;
 
  }
  a
@@ -487,4 +486,11 @@ img,
 video {
     max-width: 100%;
     height: auto;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
 }
