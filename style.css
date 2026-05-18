@@ -490,7 +490,7 @@ video {
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 2px;
     text-decoration: none;
     color: inherit;
 }
