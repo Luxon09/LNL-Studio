@@ -4,7 +4,15 @@
     <meta name="google-site-verification" content="XHnSdoHxe-wTuIV4j5-Y4WnGaqgd3U1thbE61zLQ86Y" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LNL Studio - sajt naših igara Bubble Blower i Harmonize.">
+    <meta property="og:title" content="LNL Studio">
+    <meta property="og:description" content="Naše igre Bubble Blower i Harmonize.">
+    <meta property="og:image" content="https://luxon09.github.io/LNL-Studio/ikonastd.png">
+    <meta property="og:url" content="https://luxon09.github.io/LNL-Studio/">
+    <meta property="og:type" content="website">
+    <meta name="keywords" content="LNL Studio, igre, Bubble Blower, Harmonize, game studio">
     <title>LNL Studio</title>
+<<<<<<< HEAD
 
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="ikonastd.png">
@@ -37,16 +45,34 @@
         images[newIndex].classList.add("active");
     }
     </script>
+=======
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://luxon09.github.io/LNL-Studio/ikonastd.png">
+    <link rel="shortcut icon" href="https://luxon09.github.io/LNL-Studio/ikonastd.png">
+    <link rel="apple-touch-icon" href="https://luxon09.github.io/LNL-Studio/ikonastd.png">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="stylesheet" href="style.css">
+    
+>>>>>>> 8c486d935275bd8e298b44ff31c7d7643a71809a
 </head>
 <body>
 
 <div id="top"></div>
 
 <nav>
+<<<<<<< HEAD
     <img src="ikonastd.png" class="slika">
     <div class="logo">
         <span>LNL</span> Studio
     </div>
+=======
+    <a href="#top" class="logo-link">
+        <img src="ikonastd.png" class="slika" alt="LNL-Studio-Logo">
+        <div class="logo">
+            <span>LNL</span> Studio
+        </div>
+    </a>
+>>>>>>> 8c486d935275bd8e298b44ff31c7d7643a71809a
     <ul>
         <li><a href="#top">Početna</a></li>
         <li><a href="#games">Igrice</a></li>
@@ -128,12 +154,23 @@
             </div>
 
             <div class="image-slider">
+<<<<<<< HEAD
                 <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
                 <img src="mainscreen.png" class="active" alt="Bubble Blower 1">
                 <img src="ss.png" alt="Bubble Blower 2">
                 <img src="ss1.png" alt="Bubble Blower 3">
                 <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
             </div>
+=======
+    <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+
+    <img src="mainscreen.png" class="active" alt="Bubble-Blower 1">
+    <img src="ss.png" alt="Bubble-Blower 2">
+    <img src="ss1.png" alt="Bubble-Blower 3">
+
+    <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+</div>
+>>>>>>> 8c486d935275bd8e298b44ff31c7d7643a71809a
         </div>
 
         <div class="details-content">
@@ -144,6 +181,7 @@
                 </p>
             </div>
 
+<<<<<<< HEAD
             <div class="image-slider">
                 <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
                 <img src="harmonize main screen.png" class="active" alt="harmonize ide ovde!!! 1">
@@ -153,10 +191,57 @@
             </div>
         </div>
     </section>
+=======
+            
+           <div class="image-slider">
+    <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+
+    <img src="harmonize main screen.png" class="active" alt="harmonize-ide-ovde!!! 1">
+    <img src="sss.png" alt="harmonize-ide-ovde!!! 2">
+    <img src="ssss.png" alt="harmonize-ide-ovde!!! 3">
+
+    <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+</div>
+        </div>
+</section>
+>>>>>>> 8c486d935275bd8e298b44ff31c7d7643a71809a
 
     <footer>
         © 2026 LNL Studio
     </footer>
 
+    <script>
+    function changeSlide(button, direction) {
+        const slider = button.parentElement;
+        const images = slider.querySelectorAll("img");
+
+        let currentIndex = 0;
+
+        images.forEach((img, index) => {
+            if (img.classList.contains("active")) {
+                currentIndex = index;
+                img.classList.remove("active");
+            }
+        });
+
+        let newIndex = currentIndex + direction;
+
+        if (newIndex < 0) {
+            newIndex = images.length - 1;
+        }
+
+        if (newIndex >= images.length) {
+            newIndex = 0;
+        }
+
+        images[newIndex].classList.add("active");
+    }
+    </script>
+
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> 8c486d935275bd8e298b44ff31c7d7643a71809a
